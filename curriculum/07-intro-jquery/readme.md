@@ -288,18 +288,14 @@ You'll add the ability to complete tasks in your favorite things list:
 
 ## Conclusion
 
-Ask students what was learned. Make sure the objectives have been met.
-
 * Uderstand how HTML parses and creates the object model, the DOM.
 * Use selectors and methods to access and update HTML using the DOM.
 * Register and trigger event handlers for jQuery events.
 
 #### Homework
 
-The following homework assignment should be introduced before the end of class--make sure that students understand the goals of the exercise and have an opportunity to ask questions. The assignment should be due by the next class period--students should submit links to their completed assignments on GitHub to the instructional team using Slack.
-
 **99 Bottles of Beer**
-- Remember the [99 Bottles of Beer assignment](../03-conditionals-and-loops#conclusion)? For this assignment, you'll be creating a website that programatically displays the lyrics to that song.
+- Remember the [99 Bottles of Water assignment](../03-conditionals-and-loops#conclusion)? For this assignment, you'll be creating a website that programatically displays the lyrics to that song.
 - You'll need to create both an `.html` file and a `.js` file
 - In your HTML file, you'll want to have an unordered list (`<ul>`) that contains all of your lyrics
 - Each line of the song should appear inside of a list item (`<li>`) within that unordered list
