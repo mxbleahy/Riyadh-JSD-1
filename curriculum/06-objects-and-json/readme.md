@@ -225,7 +225,7 @@ Person.prototype.getAge = function () {
 <a name = "lab1"></a>
 ## Monkey Exercise
 
-Open the [monkey.js file](starter-code/monkey.js) in the starter code.
+Open the [monkey.js file](https://github.com/didiloki/jsd-assignment/blob/master/05-objects-json/starter-code/monkey.js) in the starter code.
 
 Work with a partner to create a monkey object, which has the following properties:
 
@@ -244,7 +244,7 @@ Exercise your monkeys by retrieving their properties and using their methods. Pr
 ---
 ## Working with Object Properties: Bonus!
 
-Work individually or with a partner and follow instructions in the [app.js](starter-code/objects/app.js) file to complete the challenge!
+Work individually or with a partner and follow instructions in the [app.js](https://github.com/didiloki/jsd-assignment/blob/master/05-objects-json/starter-code/objects/app.js) file to complete the challenge!
 
 ---
 <a name = "introduction1"></a>
@@ -268,7 +268,7 @@ We use JSON objects to transfer data between applications and Javascript. To kee
 
 ## JSON: Independent Practice
 
-Work individually or with a partner and follow instructions in the [app.js](starter-code/json/app.js) file.
+Work individually or with a partner and follow instructions in the [app.js](https://github.com/didiloki/jsd-assignment/blob/master/05-objects-json/starter-code/app.js) file.
 
 ---
 
@@ -286,7 +286,7 @@ Make sure the lesson objectives have been met.
 
 
 **Converting JSON**
-- All of the instructions for this exercise are contained [in the json-hw.js file](starter-code/json-hw.js), located in the starter code folder
+- All of the instructions for this exercise are contained [in the json-hw.js file](https://github.com/didiloki/jsd-assignment/blob/master/05-objects-json/starter-code/json-hw.js), located in the starter code folder
 - Provide students with the json-hw.js file and have them read through the instructions and complete each of the challenges, typing their code directly into the file
 
 #### Additional JavaScript Object Resources
