@@ -12,7 +12,7 @@ function anagram(word) {
 
   for (var i = 0; i < array.length; i++) {
     let curr_element = array[i]
-      .split("")
+      .split("") // we split to make an array of charc
       .sort()
       .join("");
 
