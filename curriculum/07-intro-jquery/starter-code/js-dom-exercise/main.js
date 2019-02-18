@@ -22,3 +22,4 @@ When they click submit without typing anything, alert the user
   (Hint: the `value` property of the input box, before anyone types in it,
   is the empty string.)
 */
+

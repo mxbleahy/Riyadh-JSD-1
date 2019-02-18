@@ -48,7 +48,8 @@ We can manipulate the DOM in 3 different ways:
   <html>
     <head>
       <script>
-         alert('Welcome to my app!');
+        //  alert('Welcome to my app!');
+        - `document.write('text and HTML')`
       </script>
     </head>
     <body>
