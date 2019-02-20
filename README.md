@@ -57,9 +57,7 @@ General Assembly's JavaScript Development course is made up of 20 lessons that a
 | Lesson 2 | [DOM & jQuery Continued](curriculum/08-dom-and-jquery2/readme.md) ||  | |
 | Lesson 3| [AJAX and APIs](curriculum/09-ajax-and-apis/readme.md) ||  |  |
 | Lesson 4 | [Asynchronous JS and Callbacks](curriculum/10-async-and-callbacks/readme.md) || |  |
-| Lesson 5 | [Advance API](curriculum/05-in-class-lab) || |  |
-| Lesson 6 | [Lab Time](curriculum/05-in-class-lab) || |  |
-| Lesson 7 | [**Project 2 Lab:** Slackbot](curriculum/05-in-class-lab) || |  |
+| Lesson 5 | [**Project 2 Lab:** API ](curriculum/11-in-class-lab) || |  |
 
 
 
