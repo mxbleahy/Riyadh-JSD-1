@@ -21,7 +21,7 @@ Although we have used asynchronous programming in our code, we have not discusse
 
 ---
 <a name = "recap"></a>
-## Anonymous Functions and Functions as First-Class Objects: Recap (15 min)
+## Anonymous Functions and Functions as First-Class Objects(Callbacks): Recap 
 
 We have worked with numerous scenarios where we have run a block of code after a user has performed an action. Take the following scenario from our DOM and jQuery continued lesson:
 
@@ -131,6 +131,36 @@ Just as we can pass functions as arguments to other functions, we can also retur
 
 This ability to pass functions as arguments to other functions, and to return functions from other functions, gives JavaScript an enormous amount of flexibility and power, especially when coupled with a language feature called "closures". Notice how when you run `launchViking()` and `launchMariner()`, you somehow have access to the original rocketNames, even though the function `makeRocketLauncher()` that you passed them into has run its course and is no longer executing? That's because `launchViking()` and `launchMariner()` are "closures", meaning they have "closed over" those rocketName variables. We'll go into what that means and why it's useful a couple of lessons from now.
 
+<a name = "lab1"></a>
+## Callback Hell
+This solution led to something called callback hell, and too many applications still feel the burn of it.
+
+### Pyramid of Doom!
+```
+pyramidOfDoom('1.js', function(error, script) {
+
+  if (error) {
+    handleError(error);
+  } else {
+    // ...
+    pyramidOfDoom('2.js', function(error, script) {
+      if (error) {
+        handleError(error);
+      } else {
+        // ...
+        pyramidOfDoom('3.js', function(error, script) {
+          if (error) {
+            handleError(error);
+          } else {
+            // ...continue after all scripts are loaded (*)
+          }
+        });
+
+      }
+    })
+  }
+});
+```
 
 ---
 
@@ -239,6 +269,57 @@ Open the [main.js](starter-code/iife-exercise/js/main.js) file.
 - Use the setTimeout function to count up.
 - Hint: a second is the timer passed * 1000 (milliseconds).
 
+## Promise
+Sent from the above to help with callback hell.
+The `promises` were the next logical step in escaping callback hell. This method did not remove the use of callbacks, but it made the chaining of functions straightforward and simplified the code, making it much easier to read.
+
+![](https://cdn-images-1.medium.com/max/1600/0*_if1EyoEM4I4jwpB.png)
+[Ref to image source](https://blog.hellojs.org/asynchronous-javascript-from-callback-hell-to-async-and-await-9b9ceb63c8e8)
+
+With promises our code can be as simple as this:
+
+```
+function user(){
+    return new Promise((resolve,reject)=>{
+        if(true){
+            resolve()
+        }else{
+            reject()
+        }
+    })
+}
+```
+then we can call our user function in this way:
+
+```
+user.then(finalResult => {
+           //do whatever the 'callback' would do
+       })
+       .catch((err) => {
+           //do whatever the error handler needs
+       });
+```
+
+## Async/ Await
+Promises paved the way to one of the coolest improvements in JavaScript. ECMAScript 2017 brought in syntactic sugar on top of Promises in JavaScript in the form of async and await statements.
+
+They allow us to write Promise-based code as if it were synchronous, but without blocking the main thread, as this code sample demostrates:
+
+```
+const verifyUser = async function(username, password){
+   try {
+       const userInfo = await dataBase.verifyUser(username, password);
+       const rolesInfo = await dataBase.getRoles(userInfo);
+       const logStatus = await dataBase.logAccess(userInfo);
+       return userInfo;
+   }catch (e){
+       //handle errors as needed
+   }
+};
+```
+Awaiting Promise to resolve is allowed only within async functions which means that verifyUser had to be defined using async function.
+
+However, once this small change is made you can await any Promise without additional changes in other methods.
 ---
 
 <a name = "conclusion"></a>
@@ -261,8 +342,10 @@ Before the next class, make sure that students sign up for a 500px developer acc
 - [Brief intro to callbacks][2]
 - [Demystifying JavaScript Closures, Callbacks and IIFEs][3]
 - [More in-depth article on callbacks][4]
+- [Async programming][5]
 
 [1]: http://helephant.com/2008/08/19/functions-are-first-class-objects-in-javascript/
 [2]: http://www.impressivewebs.com/callback-functions-javascript/
 [3]: http://www.sitepoint.com/demystifying-javascript-closures-callbacks-iifes/
 [4]: http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/
+[5]: https://blog.hellojs.org/asynchronous-javascript-from-callback-hell-to-async-and-await-9b9ceb63c8e8/
